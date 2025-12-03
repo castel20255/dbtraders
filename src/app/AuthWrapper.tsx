@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDerivAuth } from '@/hooks/useDerivAuth';
 import App from './App';
 
