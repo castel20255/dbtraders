@@ -1,3 +1,10 @@
+import { getSocketURL } from '@/components/shared';
+import { website_name } from '@/utils/site-config';
+import DerivAPIBasic from '@deriv/deriv-api/dist/DerivAPIBasic';
+import { getInitialLanguage } from '@deriv-com/translations';
+import APIMiddleware from './api-middleware';
+
+export const generateDerivApiInstance = () => {
     const cleanedServer = getSocketURL().replace(/[^a-zA-Z0-9.]/g, '');
     // Force App ID for websocket connection
     const cleanedAppId = String(113875);
