@@ -31,7 +31,7 @@ const SuspenseWrapper = ({ children }: { children: React.ReactNode }) => {
         return localize('Please wait while we connect to the server...');
     };
 
-    return <Suspense fallback={<ChunkLoader message={getLoadingMessage()} />}>{children}</Suspense>;
+    return <Suspense fallback={<ChunkLoader />}>{children}</Suspense>;
 };
 
 const router = createBrowserRouter(
