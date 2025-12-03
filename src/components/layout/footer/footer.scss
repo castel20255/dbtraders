@@ -11,17 +11,27 @@
     bottom: 0;
     right: 0;
     left: 0;
-    border-top: 1px solid var(--general-section-1);
-    box-shadow: 0 1px 0 0 var(--general-section-1) inset;
-    background: var(--general-main-1);
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
     z-index: 2;
 
     &__icon {
         padding: 0.8rem;
+        transition: all 0.2s ease;
 
-        svg > g > path,
-        svg > path {
+        svg>g>path,
+        svg>path {
             fill: var(--text-prominent);
+            transition: fill 0.2s ease;
+        }
+
+        &:hover {
+
+            svg>g>path,
+            svg>path {
+                fill: var(--brand-purple-1);
+            }
         }
 
         @include mobile-or-tablet-screen {
@@ -32,7 +42,7 @@
     &__vertical-line {
         width: 0.1rem;
         height: 1.6rem;
-        background-color: var(--general-section-1);
+        background-color: rgba(255, 255, 255, 0.2);
         margin: 0 0.8rem;
     }
 

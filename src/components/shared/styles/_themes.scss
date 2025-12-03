@@ -38,11 +38,11 @@
     // Brand primary colors
     --brand-white: #{constants.$color-white};
     --brand-dark-grey: #{constants.$color-black};
-    --brand-red-coral: #{constants.$color-red};
+    --brand-red-coral: #{constants.$color-blue};
     --brand-orange: #{constants.$color-orange};
 
     // Brand secondary colors
-    --brand-secondary: #{constants.$color-green};
+    --brand-secondary: #{constants.$color-orange};
 
     // App Cards gradient background
     --app-card-virtual: #{constants.$gradient-virtual};
@@ -50,6 +50,25 @@
 
     // Opacity
     --tw-border-opacity: 1;
+
+    // Modern UI Variables
+    --gradient-primary: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    /* Blue -> Cyan */
+    --gradient-secondary: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    /* Green -> Lime */
+    --gradient-accent: linear-gradient(135deg, #fce38a 0%, #f38181 100%);
+    /* Orange -> Amber */
+
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-blur: blur(10px);
+
+    --neu-shadow-light: 5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff;
+    --neu-shadow-dark: 5px 5px 10px #0b0e18, -5px -5px 10px #191c31;
+
+    --glow-primary: 0 0 15px rgba(0, 198, 255, 0.6);
+    --glow-secondary: 0 0 15px rgba(56, 239, 125, 0.6);
 
     .theme--light {
         // General
@@ -102,11 +121,11 @@
         --button-primary-default: var(--brand-red-coral);
         --button-secondary-default: #{constants.$color-grey-1};
         --button-tertiary-default: transparent;
-        --button-primary-light-default: #{constants.$alpha-color-red-2};
-        --button-primary-hover: #{constants.$color-red-5};
+        --button-primary-light-default: #{constants.$alpha-color-blue-2};
+        --button-primary-hover: #{constants.$color-blue-4};
         --button-secondary-hover: #{constants.$alpha-color-black-3};
         --button-tertiary-hover: #{constants.$alpha-color-red-1};
-        --button-primary-light-hover: #{constants.$alpha-color-red-3};
+        --button-primary-light-hover: #{constants.$alpha-color-blue-3};
         --button-toggle-primary: #{constants.$color-blue-3};
         --button-toggle-secondary: #{constants.$color-grey-5};
         --button-toggle-alternate: #{constants.$color-white};
@@ -246,11 +265,11 @@
         --button-primary-default: var(--brand-red-coral);
         --button-secondary-default: #{constants.$color-grey-7};
         --button-tertiary-default: transparent;
-        --button-primary-light-default: #{constants.$alpha-color-red-2};
-        --button-primary-hover: #{constants.$color-red-5};
+        --button-primary-light-default: #{constants.$alpha-color-blue-2};
+        --button-primary-hover: #{constants.$color-blue-4};
         --button-secondary-hover: #{constants.$alpha-color-white-3};
         --button-tertiary-hover: #{constants.$alpha-color-red-1};
-        --button-primary-light-hover: #{constants.$alpha-color-red-3};
+        --button-primary-light-hover: #{constants.$alpha-color-blue-3};
         --button-toggle-primary: #{constants.$color-blue-3};
         --button-toggle-secondary: #{constants.$color-black-8};
         --button-toggle-alternate: #{constants.$color-black-8};

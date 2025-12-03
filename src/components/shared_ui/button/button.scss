@@ -90,21 +90,29 @@
     }
 
     &--primary {
-        background: var(--button-primary-default);
+        background: var(--gradient-primary);
         color: var(--text-colored-background);
+        border-radius: 24px;
+        box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4);
+        transition: all 0.3s ease;
 
         &:hover:not([disabled]) {
-            background: var(--button-primary-hover);
+            background: var(--gradient-primary);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: var(--glow-primary);
         }
 
         &:active:not([disabled]) {
-            background: var(--button-primary-default);
+            background: var(--gradient-primary);
+            transform: translateY(1px);
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         &:disabled,
         &[disabled] {
             opacity: 0.32;
             cursor: not-allowed !important;
+            box-shadow: none;
         }
 
         .dc-btn__text,
@@ -119,6 +127,7 @@
 
         &__light {
             background: var(--button-primary-light-default);
+            border-radius: 24px;
 
             &:hover:not([disabled]) {
                 background: var(--button-primary-light-hover);
@@ -142,26 +151,34 @@
     }
 
     &--secondary {
-        background: transparent;
-        border: 1px solid var(--button-secondary-default);
+        background: var(--gradient-secondary);
+        border: none;
+        border-radius: 24px;
+        color: var(--text-colored-background);
+        box-shadow: 0 4px 15px rgba(56, 239, 125, 0.4);
+        transition: all 0.3s ease;
 
         &:hover:not([disabled]) {
-            background: var(--button-secondary-hover);
+            background: var(--gradient-secondary);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: var(--glow-secondary);
         }
 
         &:active:not([disabled]) {
-            border: 1px solid var(--button-secondary-default);
+            transform: translateY(1px);
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         &:disabled,
         &[disabled] {
             opacity: 0.32;
             cursor: not-allowed !important;
+            box-shadow: none;
         }
 
         .dc-btn__text,
         .dc-btn__icon {
-            color: var(--text-prominent);
+            color: var(--text-colored-background);
         }
     }
 
@@ -293,7 +310,7 @@
     &__group {
         white-space: nowrap;
 
-        .dc-btn + .dc-btn {
+        .dc-btn+.dc-btn {
             margin-left: 8px;
         }
     }

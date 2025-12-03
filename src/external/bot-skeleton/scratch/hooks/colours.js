@@ -1,39 +1,39 @@
 const lightMode = () => {
     const workspace = Blockly;
     workspace.Colours.RootBlock = {
-        colour: '#064e72',
-        colourSecondary: '#064e72',
-        colourTertiary: '#6d7278',
+        colour: '#8B5CF6', // Purple primary
+        colourSecondary: '#7C3AED', // Darker purple
+        colourTertiary: '#DDD6FE', // Light purple
     };
 
     workspace.Colours.Base = {
-        colour: '#e5e5e5',
-        colourSecondary: '#ffffff',
-        colourTertiary: '#6d7278',
+        colour: '#A78BFA', // Medium purple
+        colourSecondary: '#C4B5FD', // Light purple
+        colourTertiary: '#8B5CF6', // Purple primary
     };
 
     workspace.Colours.Special1 = {
-        colour: '#e5e5e5',
-        colourSecondary: '#ffffff',
-        colourTertiary: '#6d7278',
+        colour: '#9333EA', // Vibrant purple
+        colourSecondary: '#A855F7', // Light vibrant purple
+        colourTertiary: '#DDD6FE', // Very light purple
     };
 
     workspace.Colours.Special2 = {
-        colour: '#e5e5e5',
-        colourSecondary: '#ffffff',
-        colourTertiary: '#6d7278',
+        colour: '#7C3AED', // Dark purple
+        colourSecondary: '#8B5CF6', // Purple primary
+        colourTertiary: '#EDE9FE', // Lightest purple
     };
 
     workspace.Colours.Special3 = {
-        colour: '#e5e5e5',
-        colourSecondary: '#ffffff',
-        colourTertiary: '#6d7278',
+        colour: '#6D28D9', // Deep purple
+        colourSecondary: '#7C3AED', // Dark purple
+        colourTertiary: '#C4B5FD', // Light purple
     };
 
     workspace.Colours.Special4 = {
-        colour: '#e5e5e5',
-        colourSecondary: '#000000',
-        colourTertiary: '#0e0e0e',
+        colour: '#5B21B6', // Darkest purple
+        colourSecondary: '#6D28D9', // Deep purple
+        colourTertiary: '#DDD6FE', // Light purple
     };
 };
 

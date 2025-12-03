@@ -60,10 +60,6 @@ const AccountSwitcherFooter = ({ loginid, residence, type }: TAccountSwitcherFoo
 
     return (
         <div className=''>
-            <UIAccountSwitcher.TradersHubLink href={final_url_str}>
-                {localize(`Looking for CFD accounts? Go to Trader's Hub`)}
-            </UIAccountSwitcher.TradersHubLink>
-            <AccountSwitcherDivider />
             {!is_virtual_tab && (
                 <div
                     className={classNames('account-switcher-footer__actions', {

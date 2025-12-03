@@ -16,6 +16,7 @@ import NetworkStatus from './NetworkStatus';
 import ResponsibleTrading from './ResponsibleTrading';
 import ServerTime from './ServerTime';
 import WhatsApp from './WhatsApp';
+import RiskDisclaimer from './RiskDisclaimer';
 import './footer.scss';
 
 const Footer = () => {
@@ -44,6 +45,8 @@ const Footer = () => {
             <div className='app-footer__vertical-line' />
             <NetworkStatus />
             <Endpoint />
+            <div className='app-footer__vertical-line' />
+            <RiskDisclaimer />
 
             {isModalOpenFor('DesktopLanguagesModal') && (
                 <DesktopLanguagesModal

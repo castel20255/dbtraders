@@ -10,8 +10,9 @@
     &__account-settings,
     .notifications__wrapper,
     &__menu {
-        svg > path,
-        svg > g > path {
+
+        svg>path,
+        svg>g>path {
             fill: var(--text-prominent);
         }
     }
@@ -127,7 +128,7 @@
             box-shadow: 0 0 2px 0 var(--du-shadow-box, #00000014);
         }
 
-        .deriv-account-switcher__balance + svg > path {
+        .deriv-account-switcher__balance+svg>path {
             fill: var(--text-general);
         }
 
@@ -290,4 +291,25 @@
 
 .deriv-accordion--underline {
     border-bottom: none;
+}
+
+.header__logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-right: 2.4rem;
+}
+
+.header__brand-name {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 50%, #6D28D9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+
+    @include mobile-or-tablet-screen {
+        font-size: 1.6rem;
+    }
 }

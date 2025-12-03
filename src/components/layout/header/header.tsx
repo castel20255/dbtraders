@@ -157,10 +157,10 @@ const AppHeader = observer(({ isAuthenticating }: TAppHeaderProps) => {
                                             redirectCallbackUri: `${window.location.origin}/callback`,
                                             ...(query_param_currency
                                                 ? {
-                                                      state: {
-                                                          account: query_param_currency,
-                                                      },
-                                                  }
+                                                    state: {
+                                                        account: query_param_currency,
+                                                    },
+                                                }
                                                 : {}),
                                         });
                                     } catch (err) {
@@ -213,9 +213,11 @@ const AppHeader = observer(({ isAuthenticating }: TAppHeaderProps) => {
             })}
         >
             <Wrapper variant='left'>
-                <AppLogo />
-                <MobileMenu />
-                {isDesktop && <MenuItems.TradershubLink />}
+                <div className='header__logo-wrapper'>
+                    <AppLogo />
+                    <span className='header__brand-name'>ProfitHub</span>
+                </div>
+                {/* <MobileMenu /> */}
                 {isDesktop && <MenuItems />}
                 {isDesktop && <PlatformSwitcher />}
             </Wrapper>

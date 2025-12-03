@@ -1,16 +1,17 @@
 import { LegacyWhatsappIcon } from '@deriv/quill-icons/Legacy';
 import { useTranslations } from '@deriv-com/translations';
 import { Tooltip } from '@deriv-com/ui';
-import { URLConstants } from '@deriv-com/utils';
 
 const WhatsApp = () => {
     const { localize } = useTranslations();
+    const whatsappNumber = '254757722344';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
     return (
         <Tooltip
             as='a'
             className='app-footer__icon'
-            href={URLConstants.whatsApp}
+            href={whatsappUrl}
             target='_blank'
             tooltipContent={localize('WhatsApp')}
         >

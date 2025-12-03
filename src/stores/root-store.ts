@@ -19,6 +19,7 @@ import ToolbarStore from './toolbar-store';
 import ToolboxStore from './toolbox-store';
 import TransactionsStore from './transactions-store';
 import UiStore from './ui-store';
+import FreeBotStore from './free-bot-store';
 
 // TODO: need to write types for the individual classes and convert them to ts
 export default class RootStore {
@@ -42,6 +43,7 @@ export default class RootStore {
     public chart_store: ChartStore;
     public blockly_store: BlocklyStore;
     public data_collection_store: DataCollectionStore;
+    public free_bot_store: FreeBotStore;
 
     public ui: UiStore;
     public client: ClientStore;
@@ -84,5 +86,6 @@ export default class RootStore {
         this.chart_store = new ChartStore(this);
         this.blockly_store = new BlocklyStore(this);
         this.data_collection_store = new DataCollectionStore(this, this.core);
+        this.free_bot_store = new FreeBotStore(this);
     }
 }
