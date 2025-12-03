@@ -1,7 +1,6 @@
 import React from 'react';
 import ChunkLoader from '@/components/loader/chunk-loader';
 import { useDerivAuth } from '@/hooks/useDerivAuth';
-import { localize } from '@deriv-com/translations';
 import App from './App';
 
 export const AuthWrapper = () => {
@@ -11,14 +10,14 @@ export const AuthWrapper = () => {
     React.useEffect(() => {
         // Give auth a moment to initialize
         const timer = setTimeout(() => {
-            set ShowApp(true);
+            setShowApp(true);
         }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
 
     if (!showApp) {
-        return <ChunkLoader message={localize('Initializing...')} />;
+        return <ChunkLoader />;
     }
 
     return <App />;
