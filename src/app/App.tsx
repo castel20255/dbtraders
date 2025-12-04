@@ -18,44 +18,25 @@ const Layout = lazy(() => import('../components/layout'));
 const AppRoot = lazy(() => import('./app-root'));
 
 const { TRANSLATIONS_CDN_URL, R2_PROJECT_NAME, CROWDIN_BRANCH_NAME } = process.env;
-const i18nInstance = initializeI18n({
-    cdnUrl: `${TRANSLATIONS_CDN_URL}/${R2_PROJECT_NAME}/${CROWDIN_BRANCH_NAME}`,
-});
-
-// Simple Suspense wrapper without timeout that causes dark landing page
-const SuspenseWrapper = ({ children }: { children: React.ReactNode }) => {
-    const { isOnline } = useOfflineDetection();
-
-    const getLoadingMessage = () => {
-        if (!isOnline) return localize('Loading offline dashboard...');
-        return localize('Please wait while we connect to the server...');
-    };
-
-    return <Suspense fallback={<ChunkLoader />}>{children}</Suspense>;
-};
-
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route
-            path='/'
-            element={
-                <SuspenseWrapper>
-                    <TranslationProvider defaultLang='EN' i18nInstance={i18nInstance}>
-                        <StoreProvider>
-                            <RoutePromptDialog />
-                            <CoreStoreProvider>
-                                <Layout />
-                            </CoreStoreProvider>
-                        </StoreProvider>
-                    </TranslationProvider>
-                </SuspenseWrapper>
+path = '/'
+element = {
+                < SuspenseWrapper >
+    <TranslationProvider defaultLang='EN' i18nInstance={i18nInstance}>
+        <StoreProvider>
+            <RoutePromptDialog />
+            <CoreStoreProvider>
+                <Layout />
+            </CoreStoreProvider>
+        </StoreProvider>
+    </TranslationProvider>
+                </SuspenseWrapper >
             }
         >
-            {/* All child routes will be passed as children to Layout */}
-            <Route index element={<AppRoot />} />
-            <Route path='endpoint' element={<Endpoint />} />
-            <Route path='callback' element={<CallbackPage />} />
-        </Route>
+    {/* All child routes will be passed as children to Layout */ }
+    < Route index element = {< AppRoot />} />
+        < Route path = 'endpoint' element = {< Endpoint />} />
+            < Route path = 'callback' element = {< CallbackPage />} />
+        </Route >
     )
 );
 
